@@ -1,0 +1,70 @@
+ <table class="table table-bordered table-striped" id="mydata">
+
+<thead>
+
+      <tr>
+
+            <td>Kode Produk</td>
+
+            <td>Nama Produk</td>
+
+            <td>Deskripsi</td>
+
+            <td>Harga</td>
+
+            <td>Foto</td>
+
+            <td>Stock</td>
+
+            <td>Tipe</td>
+            
+
+      </tr>
+
+</thead>
+
+<tbody>
+
+      <?php
+
+            foreach($data->result_array() as $i):
+
+                  $produk_id=$i['id_produk'];
+
+                  $produk_nama=$i['nama_produk'];
+
+                  $produk_deskripsi=$i['deskripsi'];
+
+                  $produk_harga=$i['harga'];
+
+                  $produk_foto=$i['foto'];
+
+                  $produk_stock=$i['stock'];
+
+                  $produk_tipe=$i['tipe'];
+
+      ?>
+
+      <tr>
+
+            <td><?php echo $produk_id;?> </td>
+
+            <td><?php echo $produk_nama;?> </td>
+
+            <td><?php echo $produk_deskripsi;?> </td>
+
+            <td><?php echo $produk_harga;?> </td>
+
+            <td><?php echo $produk_foto;?> </td>
+
+            <td><?php echo $produk_stock;?> </td>
+            
+            <td><?php echo $produk_tipe;?> </td>
+
+      </tr>
+
+      <?php endforeach;?>
+
+</tbody>
+
+</table>
